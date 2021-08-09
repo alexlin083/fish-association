@@ -6,7 +6,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import axios from "axios";
-
+import Swal from "sweetalert2";
 import MemberBoard from "../MemberBoard";
 
 //導入圖片
@@ -100,6 +100,7 @@ function General(props) {
         setData(fields);
         // console.log(data);
         // console.log(fields);
+        Swal.fire("您已變更了項目");
       })
       .catch((error) => {
         throw error;
@@ -129,6 +130,7 @@ function General(props) {
     // window.location.href = "/member";
     // window.location.replace("/member");
     // window.history.go(0);
+    Swal.fire("您已變更了大頭貼");
   }
 
   return (

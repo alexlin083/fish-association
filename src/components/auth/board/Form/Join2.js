@@ -65,7 +65,6 @@ class Join2 extends Component {
                   type="date"
                   name="dob"
                   required
-                  style={{ background: "#dcdcdc" }}
                   placeholder="Date of Birth"
                   ref={(input) => (this.birth = input)}
                 />

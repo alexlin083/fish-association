@@ -27,6 +27,13 @@
   width: 100%;
   object-fit: cover;
 }
+
+.swiper-button-prev {
+  color: var(--second-color);
+}
+.swiper-button-next {
+  color: var(--second-color);
+}
 /* travel-notes swiper css END */
 
 /* travel-notes toprank css*/
@@ -75,7 +82,7 @@
 }
 
 .list-top {
-  padding: 50px 0 30px 0;
+  padding: 50px 0 10px 0;
 }
 .TN-write-btn {
   background: var(--fifth-color);
@@ -148,6 +155,8 @@
 
 .TN-content-limit {
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  /* white-space: normal; */
 }

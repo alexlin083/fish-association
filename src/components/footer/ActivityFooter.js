@@ -20,7 +20,7 @@ import alex from "../../assets/img/footer/04.jpg";
 function MainFooter(props) {
     return (
         <>
-            <footer className="footer py-3">
+            <footer className="activity-footer py-3">
                 <Container fluid="md">
                     <Row>
                         <Col className="footer-left">

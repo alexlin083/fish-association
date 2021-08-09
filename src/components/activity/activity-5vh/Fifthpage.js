@@ -11,7 +11,7 @@ class Fifthpage extends Component {
   render() {
     return (
       <>
-        <div className="activity-bg-deepgreen">
+        <div className="activity-bg-deepgreen" style={{paddingBottom:"100px"}}>
           <BgSea>
             <DivingPic src={Diving} alt="diving" />
           </BgSea>

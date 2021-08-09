@@ -3,6 +3,10 @@
   background: var(--main-color);
   color: white;
 }
+.activity-footer {
+  background: var(--main-color);
+  color: white;
+}
 
 .footer-left hr {
   background: var(--sixth-color);

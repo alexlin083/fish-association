@@ -8,7 +8,7 @@ import {Button} from "react-bootstrap";
 export default function TNWriteBtn() {
   return (
     <>
-      <Link to="/travelNotesEditor">
+      <Link to="/travelNotesUpload">
         <Button className="TN-write-btn">
           <BsPencilSquare className="mr-1" />發表文章
         </Button>

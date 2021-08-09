@@ -29,7 +29,8 @@ useEffect(() => {
   return (
     <>
         <div className="list-top d-flex justify-content-between align-items-center mx-5">
-              <TNSearch />
+              {/* <TNSearch /> */}
+              <div style={{color:"white",fontSize:"28px",fontWeight:"bold"}} className="ml-1">文章列表</div>
               <TNWriteBtn />
             </div>
         <TNBlock data={notes} />

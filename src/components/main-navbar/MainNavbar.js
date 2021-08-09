@@ -5,7 +5,7 @@ import IndexPage from "../../pages/IndexPage";
 import ActivityPage from "../../pages/ActivityPage";
 import TravelNotesPage from "../../pages/TravelNotesPage";
 import TravelNotesShow from "../../components/travel-notes/travel-note-show/TravelNotesShow"
-import TravelNotesEditor from "../../components/travel-notes/travel-note-editor/TravelNotesEditor"
+import TravelNotesUpload from "../../components/travel-notes/travel-note-editor/TravelNotesUpload"
 import AuthPage from "../../pages/AuthPage";
 import ProductsListPage from "../../pages/ProductsListPage";
 import memberPage from "../../pages/MemberPage";
@@ -212,7 +212,7 @@ class MainNavbar extends Component {
             />
             <Route path="/travelNotes" component={TravelNotesPage} />
             <Route path="/travelNotesShow/:noteId" component={TravelNotesShow} />
-            <Route path="/travelNotesEditor" component={TravelNotesEditor} />
+            <Route path="/travelNotesUpload" component={TravelNotesUpload} />
             <Route path="/member" component={memberPage}/>
             <Route path="/auth" component={AuthPage} />
             <Route path="/products/order" component={Cart} />

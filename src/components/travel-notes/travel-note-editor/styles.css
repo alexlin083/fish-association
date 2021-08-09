@@ -15,3 +15,7 @@
 .ck-editor__editable_inline {
   min-height: 400px;
 }
+
+.swal2-styled.swal2-confirm {
+  background: var(--second-color);
+}

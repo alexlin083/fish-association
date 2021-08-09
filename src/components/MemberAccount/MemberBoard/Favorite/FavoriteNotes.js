@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import likeNote from "../../../../utils/likeNote";
 import { animated, useTransition } from "react-spring";
+import Swal from "sweetalert2";
 import "./MemberFavoriteNotes.css";
 const writers = likeNote.noteMember;
 
@@ -31,7 +33,7 @@ function FavoriteNotes() {
       })
       .then((serverResponse) => {
         const noteLike = serverResponse.data;
-        console.log(noteLike);
+        // console.log(noteLike);
         setFavoriteN(noteLike);
       });
   }, []);
@@ -49,7 +51,9 @@ function FavoriteNotes() {
                 <div className="MFNcommodityFavoritesList">
                   <div className="MFNarticle-block">
                     <div className="MFNarticle-content">
-                      <a href="">{article.note_model.note_name}</a>
+                      <Link to={`/travelNotesShow/${article.note_id}`}>
+                        {article.note_model.note_name}
+                      </Link>
                       <p style={{ opacity: 0.5 }}>作者：{noteWriter.name}</p>
                     </div>
                   </div>
@@ -66,7 +70,10 @@ function FavoriteNotes() {
                           headers: { Authorization: `Bearer ${token}` },
                         }
                       );
-                      console.log(article.note_id);
+                      // console.log(article.note_id);
+                      Swal.fire(
+                        `您刪除了 ${article.note_model.note_name} 的札記收藏`
+                      );
                     }}
                   >
                     刪除

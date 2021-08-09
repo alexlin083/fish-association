@@ -17,24 +17,23 @@ function NoteShow(props) {
   
 
   useEffect(() => {
-      // const token = localStorage.getItem("token");
       axios
         .get(`http://localhost:3000/api/travelNotes/single/${noteId}`)
         .then((serverResponse) => {
           const notesRes = serverResponse.data.notes;
-          // console.log(notesRes); 
+          // console.log(typeof notesRes); 
           setNotes(notesRes)
         });
         
     }, []);
 
-  return (
-    <>
+      return (
+        <>
       <div className="activity-wrapper">
         <nav style={{ height: "65px"}}></nav>
           <Container>
-            <AuthorBlock data={notes} />
-            <TNContent data={notes} />
+              <AuthorBlock data={notes} />
+              <TNContent data={notes} />
             <TNBoard />
           </Container>
           <MainFooter />

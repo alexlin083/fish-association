@@ -20,7 +20,6 @@
 }
 
 .MJ2itemInput {
-  background: #dcdcdc;
   border-radius: 5px;
   width: 80%;
   margin-left: 20px;
@@ -28,7 +27,6 @@
 }
 
 .MJ2dateInput {
-  background: #dcdcdc;
   font-size: 16px;
   border-radius: 5px;
   width: 75px;
@@ -38,11 +36,6 @@
   color: var(--fontWhite);
   /* margin-left: 10px; */
 }
-
-/* .MJ2check {
-  color: var(--sixth-color);
-  font-size: 16px;
-} */
 
 .MJ2itemCheck {
   margin: 0px 20px;

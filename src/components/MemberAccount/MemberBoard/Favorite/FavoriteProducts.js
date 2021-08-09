@@ -4,6 +4,7 @@ import axios from "axios";
 import "./MemberFavoritesProducts.css";
 import productsAll from "../../../../utils/likeProducts";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 import {
   animated,
   useChain,
@@ -98,6 +99,7 @@ function FavoriteProducts(props) {
                         }
                       );
                       // console.log(findProduct.id);
+                      Swal.fire(`您刪除了 ${findProduct.name} 收藏項目`);
                     }}
                   >
                     刪除

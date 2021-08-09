@@ -34,6 +34,7 @@
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
     "resize-observer-polyfill": "^1.5.1",
+    "sweetalert2": "^11.1.2",
     "swiper": "^6.7.5",
     "use-tw-zipcode": "^2.0.1",
     "web-vitals": "^1.1.2"

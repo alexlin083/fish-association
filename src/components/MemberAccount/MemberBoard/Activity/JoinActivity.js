@@ -14,7 +14,7 @@ function JoinActivity() {
       })
       .then((serverResponse) => {
         const myActivity = serverResponse.data;
-        console.log(myActivity);
+        // console.log(myActivity);
         setActivity(myActivity);
       });
   }, []);

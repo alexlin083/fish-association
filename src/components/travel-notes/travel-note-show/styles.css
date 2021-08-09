@@ -66,6 +66,9 @@
   object-fit: cover;
 }
 
+.TN-board-content {
+  width: 100%;
+}
 .TN-board-content p {
   margin: 0;
   padding: 0;
@@ -88,4 +91,8 @@
 .TN-another-wrapper {
   width: 80%;
   margin: 0 auto;
+}
+
+.swal2-styled.swal2-confirm {
+  background: var(--second-color);
 }

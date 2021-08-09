@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Detail from "./detail/detail";
 import Check from "./check/check";
 import OverCheck from "./overCheck/overCheck";
+import MainFooter from "../footer/MainFooter";
 import { Button } from "react-bootstrap";
 import { useHistory } from 'react-router-dom';
 //css
@@ -181,8 +182,8 @@ function Cart() {
           }
           
         </div>
+        <MainFooter /> 
       </div>
-      
     </>
   );
 }

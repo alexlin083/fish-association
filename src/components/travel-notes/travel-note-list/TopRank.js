@@ -13,12 +13,9 @@ export default function TopRank() {
         axios
           .get("http://localhost:3000/api/travelNotes/top")
           .then((serverResponse) => {
-            
             const notesRes = serverResponse.data.notes;
             // console.log(notesRes); 
             setNotes(notesRes)
-            console.log(notes);
-            
           });
           
       }, []);
@@ -35,7 +32,7 @@ export default function TopRank() {
             <li className="d-flex align-items-center justify-content-between">
                 <Link to={`/travelNotesShow/${notes.id}`}>{index+1}. {notes.note_name}</Link>
                 <div>
-                <BsHeartFill style={{color:"var(--fifth-color)",opacity:"0.7"}} /> {notes.favorite}
+                  <BsHeartFill style={{color:"var(--fifth-color)",opacity:"0.7"}} /> {notes.favorite}
                 </div>
             </li>
             <hr></hr>
