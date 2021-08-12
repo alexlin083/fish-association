@@ -1,10 +1,10 @@
 # react 漁會專題(fish-association)
 
-其宗旨是推廣北海岸在地觀光和新鮮魚貨，並提供活動報名、札記分享、魚產販售的服務喚醒大家對於海洋的熱愛，
+其宗旨是推廣北海岸在地觀光和新鮮魚貨，並提供活動報名、札記分享、魚產販售的服務喚醒大家對於海洋的熱愛。
 
 # 首頁 UI
 
-![image](https://github.com/KAO-TZU-WEI/fish-association/blob/develop/src/assets/img/Activity/Chen-Pin2.jpeg)
+![image](https://github.com/KAO-TZU-WEI/fish-association/blob/develop/src/assets/img/Activity/READMEpic.png)
 
 ## 安裝
 
@@ -168,3 +168,4 @@ npm start
 ### 專案圖片使用聲明
 
 本專案所使用之素材圖片皆非商業用途，純屬練習用，如有侵權，煩請告知，謝謝。
+首頁及會員登入插畫版權所有。
