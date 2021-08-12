@@ -13,7 +13,7 @@ function ContentBlock(props) {
         <div className="TN-content-block">
             <div className="TN-content-wrapper">
                 <h1 className="TN-content-title">{notesData.note_name}</h1>
-                <p dangerouslySetInnerHTML={{ __html: `${notesData.note_content}` }}></p>
+                <p className="TN-content-content" dangerouslySetInnerHTML={{ __html: `${notesData.note_content}` }}></p>
             </div>
         </div>
     </>

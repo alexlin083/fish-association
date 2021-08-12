@@ -3,19 +3,35 @@ import { CardDeck, Card,Row,Col } from "react-bootstrap";
 import { AiFillHeart, AiOutlineShareAlt } from "react-icons/ai";
 import { IoPersonCircleSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 function BlogShare() {
   const [blogData, setBlogData] = useState([]);
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/api/activity/note")
+  //     .then((res) => res.json())
+  //     .catch((error) => console.error("Error:", error))
+  //     .then((response) => {
+  //       //console.log(response.notelist);
+  //       setBlogData(response.notelist);
+  //     });
+
+
   useEffect(() => {
-    fetch("http://localhost:3000/api/activity/note")
-      .then((res) => res.json())
-      .catch((error) => console.error("Error:", error))
-      .then((response) => {
-        //console.log(response.notelist);
-        setBlogData(response.notelist);
+    axios
+      .get(`http://localhost:3000/api/activity/note`)
+      .then((serverResponse) => {
+        const notesRes = serverResponse.data.notelist;
+        // console.log(notesRes); 
+        setBlogData(notesRes)
       });
+      
+  
   }, []);
+
+
+  
 
   return (
     <CardDeck style={{ color: "#1d3557", textAlign: "left" }}>

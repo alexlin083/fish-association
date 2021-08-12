@@ -124,7 +124,7 @@ class Join2 extends Component {
                       this.gender,
                       this.birth,
                       this.phone,
-                      this.address
+                      this.address,
                     );
                   }}
                   className="MJ2btn"
