@@ -34,7 +34,7 @@ function JoinActivity() {
                   <div className="MVlistMargin MVvacationDate">
                     <div className="MVvacationTitle">日期:</div>
                     <div className="MVvacationTime">
-                      {singUP.activity_info_model.start_time}
+                      {singUP.activity_info_model.apply}
                     </div>
                   </div>
                   <div className="MVlistMargin MVvacationJoin">

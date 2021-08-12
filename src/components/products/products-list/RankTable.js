@@ -13,8 +13,7 @@ export default function RankTable() {
       </div>
       <div className="d-flex flex-column">
         <RankCard />
-        <RankCard />
-        <RankCard />
+        
       </div>
     </>
   );

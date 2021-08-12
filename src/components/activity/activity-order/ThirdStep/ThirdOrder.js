@@ -9,6 +9,7 @@ import {
 import { Wrapper, Bg_blue, ProgressBar, CheckOrder } from "./styled";
 import { Button, Modal } from "react-bootstrap";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 function ThirdOrder() {
   const { name } = useParams();
@@ -170,7 +171,7 @@ function ThirdOrder() {
           <Button variant="secondary" onClick={handleClose}>
             關閉
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="info" onClick={handleClose}>
             確認
           </Button>
         </Modal.Footer>

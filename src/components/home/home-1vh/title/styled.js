@@ -31,6 +31,7 @@ export const Title = styled.div`
       margin: 0;
       width: 18vw;
       border: 5px solid #00A2E0;
+      background: #00A2E0;
       border-radius: 5px;
   }
   h1 {

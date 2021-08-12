@@ -32,6 +32,7 @@ export const Container = styled.div`
     width: 7vw;
     margin: 0 0 0 20px;
     border: 2px solid #FFF579;
+    background: #FFF579;
     border-radius: 5px;
     margin: 0 auto;
   }

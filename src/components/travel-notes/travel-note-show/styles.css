@@ -40,6 +40,10 @@
   padding-bottom: 50px;
 }
 
+.TN-content-content {
+  font-size: 18px;
+}
+
 /* board */
 .TN-board-block {
   margin-top: 50px;

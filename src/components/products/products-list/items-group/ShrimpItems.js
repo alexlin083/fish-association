@@ -14,11 +14,30 @@ import { addShoppingCartItems } from '../../../../redux/actions/shoppingCart';
 import { axiosAddProductLike } from '../../../../redux/actions/productLike';
 
 class ShrimpItems extends Component {
+  state = {
+    itemId: 0,
+    highLight: false
+  }
+
   addCart(id) {
     let itemObj = { 
       product_id: id, buy_num: 1
     }
     this.props.addShoppingCart(itemObj);
+  }
+
+  addProductLike(id) {
+    this.setState({
+      itemId: id,
+      highLight: true
+    })
+    setTimeout(() => {
+      this.setState({
+        itemId: 0,
+        highLight: false
+      })
+    }, 2000)
+
   }
 
   render() {
@@ -31,12 +50,29 @@ class ShrimpItems extends Component {
                 <figure className="P-product-card-pic">
                   <img src={require(`../../../../assets/img/products/shrimp/${item.image}.jpg`).default} alt="" />
                 </figure>
-                <div className="d-flex justify-content-end align-items-center mr-3">
+                <div className="d-flex justify-content-end align-items-center mr-3" style={{position: 'relative'}}>
                   <BsHeartFill
                     style={{ width: "25px", height: "25px", color: `${item.like === true ? 'red' : ''}` }}
                     className="mx-2 heart"
-                    onClick={() => {this.props.productLike(item.id)}}
+                    onClick={() => {
+                      this.addProductLike(item.id)
+                      this.props.productLike(item.id)}}
+                      style={ item.id === this.state.itemId ? {
+                        width: "25px", 
+                        height: "25px",
+                        color: '#e63946'
+                      } : {
+                        width: "25px", 
+                        height: "25px"
+                      }}
+                      className="mx-2 heart"
                   />
+                  <span style={
+                    item.id === this.state.itemId ? 
+                    { position: 'absolute', top: '-10px', right: '25px', fontSize: 18, fontWeight: 'bold' } 
+                    :
+                    { display: 'none'}
+                  }>+1</span>
                   <FaShoppingCart
                     style={{ width: "25px", height: "25px" }}
                     className="shopping-cart"

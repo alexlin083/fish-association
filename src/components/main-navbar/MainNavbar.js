@@ -166,16 +166,16 @@ class MainNavbar extends Component {
                       <LinkContainer to="/auth" className="mr-0">
                         <Navbar.Brand>
                           <img
-                            src={
-                              localStorage.getItem("image") === "null"
-                                ? require(`../../assets/img/userimage/user.jpg`)
-                                    .default
-                                : "http://localhost:3000/" + localStorage.image
-                            }
                             // src={
-                            //   require(`../../assets/img/userimage/user.jpg`)
-                            //     .default
+                            //   localStorage.getItem("image") === "null"
+                            //     ? require(`../../assets/img/userimage/user.jpg`)
+                            //         .default
+                            //     : "http://localhost:3000/" + localStorage.image
                             // }
+                            src={
+                              require(`../../assets/img/userimage/user.jpg`)
+                                .default
+                            }
                             width="35"
                             height="35"
                             style={{ borderRadius: "50%" }}

@@ -31,6 +31,7 @@ export const Title = styled.div`
   hr {
     width: 10.5vw;
     border: 2px solid #FFF579;
+    background: #FFF579;
     border-radius: 5px;
     margin: 0 auto;
   }

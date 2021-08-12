@@ -31,6 +31,7 @@ export const Location = styled.div`
       width: 5vw;
       margin: 0;
       border: 2px solid #FFF579;
+      background: #FFF579;
       border-radius: 5px;
       margin-bottom: 8px;
   }

@@ -13,7 +13,7 @@ import "./styles.css";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper/core";
 
 // Slide Img import
-import Img01 from "../../../assets/img/travel-notes/slider1.jpg";
+import Img01 from "../../../assets/img/travel-notes/slider4.jpg";
 import Img02 from "../../../assets/img/travel-notes/slider2.jpg";
 import Img03 from "../../../assets/img/travel-notes/slider3.jpg";
 import { Link } from "react-router-dom";
@@ -40,7 +40,7 @@ export default function Slide() {
       >
         <SwiperSlide className="swiper-slide-TN">
           <Link to="/activity">
-            <img src={Img01} alt="" />
+            <img src={Img03} alt="" />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
@@ -50,7 +50,7 @@ export default function Slide() {
         </SwiperSlide>
         <SwiperSlide>
           <Link to="/activity">
-            <img src={Img03} alt="" />
+            <img src={Img01} alt="" />
           </Link>
         </SwiperSlide>
       </Swiper>

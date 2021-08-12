@@ -10,9 +10,6 @@ function Recommend() {
           <h1>相關推薦產品</h1>
           <div className="d-flex justify-content-between">
             <RecommendCard />
-            <RecommendCard />
-            <RecommendCard />
-            <RecommendCard />
           </div>
         </div>
       </>
