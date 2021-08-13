@@ -1,8 +1,10 @@
 # react 漁會專題(fish-association)
 
-其宗旨是推廣北海岸在地觀光和魚貨，並透過活動報名、札記分享、魚產販售的服務來達到此目的。
+其宗旨是推廣北海岸在地觀光和新鮮魚貨，並提供活動報名、札記分享、魚產販售的服務喚醒大家對於海洋的熱愛。
 
+# 首頁 UI
 
+![image](https://github.com/KAO-TZU-WEI/fish-association/blob/develop/src/assets/img/Activity/READMEpic.png)
 
 ## 安裝
 
@@ -19,193 +21,6 @@ npm start
 ```
 
 ## 本專題使用 react 技術
-
-## 活動頁-高子薇
-
-- Open Data 的天氣和潮浪 API 串接。
-- svg 地圖的地區切換。
-- 插件 Chart.js 、react calendar 、Moment.js、React Icons 的使用。
-- 路徑 components/activity/activity-1vh~activity-5vh。
-
-### 活動產品上架
-
-- 連結後台資料庫路由路徑，並透過 react calendar 顯示日期和活動詳情。
-
-```javascript
-axios({
-  method: "get",
-  baseURL: "http://localhost:3000",
-  url: "/api/activity",
-  "Content-Type": "application/json",
-});
-```
-
-### 活動報名系統
-
-- 使用 React Router 路由設定活動 ID 和訂單三步驟的切換。
-- ReactJS Forms 動態展現相對應人數的表格數量。
-- 透過 JS 來檢查使用者是否完整填寫資料。
-- 連結後台資料庫路由路徑獲取活動資訊後，再透過路由 insert 回資料庫。
-
-```js
-try {
-      axios.post(url, insertData).then((response) => {
-        setMessage(response.data.message);
-      });
-    }
-```
-
-### 地區天氣切換
-
-- 中央氣象局開放資料平臺之資料擷取 API(臺灣各縣市鄉鎮未來 1 週逐 12 小時天氣預報)。
-- 閱讀 API 文件做新北市和基隆市設定。
-- 完成 svg 圖像顯示和地區的切換。
-- 使用 ReactJS components 和 Events 觀念。
-
-```json
-{
-  "result": {
-    "fields": [
-      {
-        "id": "contentDescription",
-        "type": "String"
-      },
-      {
-        "id": "datasetDescription",
-        "type": "String"
-      },
-      {
-        "id": "locationsName",
-        "type": "String"
-      },
-      {
-        "id": "dataid",
-        "type": "String"
-      },
-      {
-        "id": "locationName",
-        "type": "String"
-      },
-      {
-        "id": "geocode",
-        "type": "Double"
-      },
-      {
-        "id": "lat",
-        "type": "Double"
-      },
-      {
-        "id": "lon",
-        "type": "Double"
-      },
-      {
-        "id": "elementName",
-        "type": "String"
-      },
-      {
-        "id": "description",
-        "type": "String"
-      },
-      {
-        "id": "startTime",
-        "type": "Timestamp"
-      },
-      {
-        "id": "endTime",
-        "type": "Timestamp"
-      },
-      {
-        "id": "dataTime",
-        "type": "Timestamp"
-      },
-      {
-        "id": "value",
-        "type": "String"
-      },
-      {
-        "id": "measures",
-        "type": "String"
-      }
-    ]
-  }
-}
-```
-
-### 地區潮浪切換
-
-- 中央氣象局開放資料平臺之資料擷取 API(潮汐預報-未來 1 個月潮汐預報)。
-- 閱讀 API 文件做萬里區、貢寮區、瑞芳區、中正區、氣象因子、排序順序的設定。
-- 完成下拉式選單觸及後地區的切換。
-- 使用 ReactJS components 和 Events 觀念。
-
-```json
-{
-  "result": {
-    "resource_id": "F-A0021-001",
-    "fields": [
-      {
-        "id": "locationName",
-        "type": "String"
-      },
-      {
-        "id": "elementName",
-        "type": "String"
-      },
-      {
-        "id": "elementValue",
-        "type": "String"
-      },
-      {
-        "id": "stationId",
-        "type": "String"
-      },
-      {
-        "id": "parameterName",
-        "type": "String"
-      },
-      {
-        "id": "parameterValue",
-        "type": "String"
-      },
-      {
-        "id": "parameterUnit",
-        "type": "String"
-      },
-      {
-        "id": "parameterMeasure",
-        "type": "String"
-      },
-      {
-        "id": "dataTime",
-        "type": "Timestamp"
-      },
-      {
-        "id": "startTime",
-        "type": "Timestamp"
-      },
-      {
-        "id": "endTime",
-        "type": "Timestamp"
-      }
-    ]
-  }
-}
-```
-
-### member & auth
-
-- 使用 JWT 和 Restful API 規範進行資料庫的串接
-- 收藏頁面使用 react-spring 動畫套件
-- 使用 axios 進行與後端 API 的連接
-- 使用 google 第三方登入
-
-```javascript
-const token = localStorage.getItem("token");
-
-axios.get("http://localhost:3000/api/profile", {
-  headers: { Authorization: `Bearer ${token}` },
-});
-```
 
 ### 專案樹狀架構圖
 
@@ -317,6 +132,40 @@ axios.get("http://localhost:3000/api/profile", {
 }
 ```
 
+### components function
+
+#### home
+
+- 手繪風的插圖設計，並搭配 full-page 技術帶領使用者有更沈浸式的享受
+- 中央氣象局的即時天氣和 chart.js 圖表呈現
+- 使用 react spring 做動畫操作
+
+#### activity
+
+- svg 地圖的地區切換
+- react calendar 顯示串接後台資料庫的日期和活動詳情
+- Open Data 的七天天氣和潮浪 API 串接圖表和地區切換
+- 活動報名系統（需連資料庫）
+
+#### auth & member
+
+- 使用 JWT 和 Restful API 規範進行資料庫的串接
+- 使用 axios 進行與後端 API 的連接
+- 使用 google 第三方登入
+
+#### products
+
+- 商品分類切換
+- 商品收藏和加入購物車
+- 購物車系統（需會員）
+
+#### travel-notes
+
+- 旅遊札記發表功能(需會員)
+- 札記喜歡、收藏、分享功能
+- 札記留言板撰寫
+
 ### 專案圖片使用聲明
 
 本專案所使用之素材圖片皆非商業用途，純屬練習用，如有侵權，煩請告知，謝謝。
+首頁及會員登入插畫版權所有。
