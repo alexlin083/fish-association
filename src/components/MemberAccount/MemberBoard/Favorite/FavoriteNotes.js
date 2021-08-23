@@ -28,7 +28,7 @@ function FavoriteNotes() {
 
   React.useEffect(() => {
     axios
-      .get("http://localhost:3000/api/profile/noteLike", {
+      .get("http://18.140.90.171:3000/api/profile/noteLike", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((serverResponse) => {
@@ -65,7 +65,7 @@ function FavoriteNotes() {
                       });
                       setFavoriteN(newWriter);
                       axios.delete(
-                        `http://localhost:3000/api/profile/noteLike/${article.note_id}`,
+                        `http://18.140.90.171:3000/api/profile/noteLike/${article.note_id}`,
                         {
                           headers: { Authorization: `Bearer ${token}` },
                         }
@@ -107,7 +107,7 @@ function FavoriteNotes() {
                       });
                       setFavoriteN(newWriter);
                       axios.delete(
-                        `http://localhost:3000/api/profile/noteLike/${article.note_id}`,
+                        `http://18.140.90.171:3000/api/profile/noteLike/${article.note_id}`,
                         {
                           headers: { Authorization: `Bearer ${token}` },
                         }

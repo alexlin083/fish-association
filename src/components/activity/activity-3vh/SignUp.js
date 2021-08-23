@@ -39,7 +39,7 @@ class SignUp extends Component {
     //從資料庫獲取活動產品資訊
     axios({
       method: "get",
-      baseURL: "http://localhost:3000",
+      baseURL: "http://18.140.90.171:3000",
       url: "/api/activity",
       "Content-Type": "application/json",
     })

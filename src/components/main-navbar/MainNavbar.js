@@ -4,8 +4,8 @@ import { LinkContainer } from "react-router-bootstrap";
 import IndexPage from "../../pages/IndexPage";
 import ActivityPage from "../../pages/ActivityPage";
 import TravelNotesPage from "../../pages/TravelNotesPage";
-import TravelNotesShow from "../../components/travel-notes/travel-note-show/TravelNotesShow"
-import TravelNotesUpload from "../../components/travel-notes/travel-note-editor/TravelNotesUpload"
+import TravelNotesShow from "../../components/travel-notes/travel-note-show/TravelNotesShow";
+import TravelNotesUpload from "../../components/travel-notes/travel-note-editor/TravelNotesUpload";
 import AuthPage from "../../pages/AuthPage";
 import ProductsListPage from "../../pages/ProductsListPage";
 import memberPage from "../../pages/MemberPage";
@@ -170,7 +170,7 @@ class MainNavbar extends Component {
                             //   localStorage.getItem("image") === "null"
                             //     ? require(`../../assets/img/userimage/user.jpg`)
                             //         .default
-                            //     : "http://localhost:3000/" + localStorage.image
+                            //     : "http://18.140.90.171:3000/" + localStorage.image
                             // }
                             src={
                               require(`../../assets/img/userimage/user.jpg`)
@@ -211,9 +211,12 @@ class MainNavbar extends Component {
               component={ActivityOrder}
             />
             <Route path="/travelNotes" component={TravelNotesPage} />
-            <Route path="/travelNotesShow/:noteId" component={TravelNotesShow} />
+            <Route
+              path="/travelNotesShow/:noteId"
+              component={TravelNotesShow}
+            />
             <Route path="/travelNotesUpload" component={TravelNotesUpload} />
-            <Route path="/member" component={memberPage}/>
+            <Route path="/member" component={memberPage} />
             <Route path="/auth" component={AuthPage} />
             <Route path="/products/order" component={Cart} />
             <Route path="/products" component={ProductsListPage} />

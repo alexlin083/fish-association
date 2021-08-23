@@ -1,9 +1,6 @@
 import * as actionTypes from "../constant";
 import axios from "axios";
 
-
-
-
 export const changeLogoutState = () => ({
   type: actionTypes.MEMBER_LOGOUT_ACTION,
   isLogin: false,
@@ -16,38 +13,36 @@ export const changeLoginState = (data) => ({
 
 export const refreshCheck = (data) => ({
   type: actionTypes.MEMBER_REFRESH_CHECK,
-  data
-})
+  data,
+});
 
 export const checkTokenProfile = (token) => {
   return (dispatch) => {
     axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-    axios
-      .get('http://localhost:3000/api/profile')
-      .then((res) => {
-          //isLogin = true
-          const action = refreshCheck({
-            token,
-            name: res.data.member.name,
-            image: res.data.member.image,
-            isLogin: true, 
-          });
-          dispatch(action);
-    })
-  }
-}
-
-
+    axios.get("http://18.140.90.171:3000/api/profile").then((res) => {
+      //isLogin = true
+      const action = refreshCheck({
+        token,
+        name: res.data.member.name,
+        image: res.data.member.image,
+        isLogin: true,
+      });
+      dispatch(action);
+    });
+  };
+};
 
 export const handleGoogleLogin = (token) => {
   return (dispatch) => {
     axios
-      .post('http://localhost:3000/api/member/login/google', token, { headers: {
-         Accept: 'application/json',
-        'Content-Type': 'application/json; charset=utf-8',
-      }})
+      .post("http://18.140.90.171:3000/api/member/login/google", token, {
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      })
       .then((serverResponse) => {
-        console.log(serverResponse)
+        console.log(serverResponse);
         const memberName = serverResponse.data.member.name;
         const memberImage = serverResponse.data.member.image;
         const memberToken = serverResponse.data.member.token;
@@ -58,15 +53,14 @@ export const handleGoogleLogin = (token) => {
           isLogin: true,
         });
         dispatch(action);
-      })
-  }
-}
-
+      });
+  };
+};
 
 export const handleAxiosLogin = (account, password) => {
   return (dispatch) => {
     axios
-      .post("http://localhost:3000/api/member/login", {
+      .post("http://18.140.90.171:3000/api/member/login", {
         member: {
           account: account,
           password: password,
@@ -79,7 +73,7 @@ export const handleAxiosLogin = (account, password) => {
         if (token) {
           // set header
           axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-        
+
           //action
           const action = changeLoginState({
             token: token,
@@ -88,7 +82,6 @@ export const handleAxiosLogin = (account, password) => {
             isLogin: true,
           });
           dispatch(action);
-          
         } else {
           delete axios.defaults.headers.common["Authorization"];
           //clear localstorage

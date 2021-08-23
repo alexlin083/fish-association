@@ -22,7 +22,7 @@ function FirstOrder(props) {
   //從資料庫讀出點擊日期的活動資訊
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/activity/${name}`)
+      .get(`http://18.140.90.171:3000/api/activity/${name}`)
       .then((res) => {
         //console.log(res.data.ret[0]);
         setData(res.data.ret[0]);

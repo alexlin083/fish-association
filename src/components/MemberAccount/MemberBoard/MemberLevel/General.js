@@ -41,7 +41,7 @@ function General(props) {
   React.useEffect(() => {
     const token = localStorage.getItem("token");
     axios
-      .get("http://localhost:3000/api/profile", {
+      .get("http://18.140.90.171:3000/api/profile", {
         headers: { Authorization: `Bearer ${token}` },
         // headers: {
         //   // Authorization:
@@ -89,7 +89,7 @@ function General(props) {
     //打API到後端
     axios
       .patch(
-        "http://localhost:3000/api/profile/update",
+        "http://18.140.90.171:3000/api/profile/update",
         { member: fields },
         {
           headers: header,
@@ -119,7 +119,7 @@ function General(props) {
     };
     photo.append("photo", e.target.files[0]);
     axios
-      .post("http://localhost:3000/api/profile/image", photo, {
+      .post("http://18.140.90.171:3000/api/profile/image", photo, {
         headers: header,
       })
       .then((response) => {
@@ -391,7 +391,7 @@ function General(props) {
                   src={
                     window.localStorage.getItem("image") === "null"
                       ? headPhoto
-                      : "http://localhost:3000/" + data.image
+                      : "http://18.140.90.171:3000/" + data.image
                   }
                   alt=""
                 />

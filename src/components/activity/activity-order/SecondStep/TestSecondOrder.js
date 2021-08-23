@@ -14,10 +14,13 @@ function SecondOrder() {
   });
 
   const saveFormData = async () => {
-    const response = await fetch("http://localhost:3000/api/activity/order", {
-      method: "POST",
-      body: JSON.stringify(values),
-    });
+    const response = await fetch(
+      "http://18.140.90.171:3000/api/activity/order",
+      {
+        method: "POST",
+        body: JSON.stringify(values),
+      }
+    );
     if (response.status !== 200) {
       throw new Error(`Request failed: ${response.status}`);
     }

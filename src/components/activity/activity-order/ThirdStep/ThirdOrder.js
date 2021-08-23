@@ -20,7 +20,7 @@ function ThirdOrder() {
   const [normalCost, setnormalCost] = useState(null);
   const [childCost, setchildCost] = useState(null);
   const [message, setMessage] = useState(null);
-  const url = "http://localhost:3000/api/activity/order";
+  const url = "http://18.140.90.171:3000/api/activity/order";
   const insertData = [];
   const history = useHistory();
   //引用彈跳視窗
@@ -64,7 +64,7 @@ function ThirdOrder() {
   useEffect(() => {
     //獲取所選擇的活動訊息
     axios
-      .get(`http://localhost:3000/api/activity/${name}`)
+      .get(`http://18.140.90.171:3000/api/activity/${name}`)
       .then((res) => {
         console.log(res.data.ret[0]);
         setorderName(res.data.ret[0].activity_name);
